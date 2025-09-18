@@ -6,6 +6,8 @@
 :root {
 	font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: 24px;
+	--panel-color: rgba(53, 45, 57, 0.6);
+	--form-color: rgba(156,175,183, 0.6);
 }
 
 /* CSS reset courtesy of Josh W Comeau at https://www.joshwcomeau.com/css/custom-css-reset/ */
@@ -73,6 +75,10 @@ h1, h2, h3, h4, h5, h6 {
 	background-repeat: no-repeat;
 }
 
+.panel {
+	background-color: var(--panel-color);
+}
+
 .left {
 	display: flex;
 	justify-content: center;
@@ -104,27 +110,41 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	margin-left: 2rem;
 	height: 40vh;
 	min-height: 10rem;
 }
 
 .middle {
-	height: max(40vh, 10rem);
-	background-color: #9CAFB7;
-	opacity: 0.5;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: max(40vh);
+	min-height: 10rem;
+	background-color: var(--form-color);
 }
 
 .bottom {
 	height: max(20vh, 5rem);
 }
 
-.panel {
-	background-color: #352D39;
-	opacity: 0.33;
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+
+form {
+	display: flex;
+	gap: 5rem;
+	margin-left: 2rem;
+}
+
+input {
+	margin-bottom: 0.5rem;
 }
 
 h1 {
 	color: #DBF4A7;
+	margin-left: 2rem;
 	font-size: clamp(0.5rem, 2vw, 3rem);
 }
