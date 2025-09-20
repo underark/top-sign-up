@@ -163,7 +163,7 @@ label {
 	letter-spacing: 2px;
 }
 
-input {
+input:enabled {
 	margin-bottom: 1.5rem;
 	background-color: transparent;
 	border-top: transparent;
@@ -178,6 +178,17 @@ input:focus {
 	border: 2px solid lightskyblue;
 	border-radius: 8px;
 	box-shadow: 2px 4px 5px 0px #000000;
+}
+
+input:user-valid {
+	border: 2px solid #3E5641;
+	border-radius: 8px;
+}
+
+input:user-invalid {
+	outline: 0;
+	border: 2px solid #BF4E30;
+	border-radius: 8px;
 }
 
 button {
